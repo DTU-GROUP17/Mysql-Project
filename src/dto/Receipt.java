@@ -11,39 +11,39 @@ public class Receipt {
 	/**
 	 * Recept nr i omraadet 1-99999999
 	 */
-	int receptId;
+	private int id;
 	/**
 	 * Receptnavn min. 2 max. 20 karakterer
 	 */
-	String receptNavn;
+	private String name;
 
 	/**
 	 * liste af kompenenter i recepten
 	 */
 
 
-	public Receipt(int receptId, String receptNavn) {
-		this.receptId = receptId;
-		this.receptNavn = receptNavn;
+	public Receipt(int id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 
-	public int getReceptId() {
-		return receptId;
+	public int getId() {
+		return id;
 	}
 
-	public void setReceptId(int receptId) {
-		this.receptId = receptId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getReceptNavn() {
-		return receptNavn;
+	public String getName() {
+		return name;
 	}
 
-	public void setReceptNavn(String receptNavn) {
-		this.receptNavn = receptNavn;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String toString() {
-		return receptId + "\t" + receptNavn;
+		return id + "\t" + name;
 	}
 }

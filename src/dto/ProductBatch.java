@@ -1,22 +1,22 @@
 package dto;
 
 public class ProductBatch {
-	int pbId;                     // i omraadet 1-99999999
-	int status;                    // 0: ikke paabegyndt, 1: under produktion, 2: afsluttet
-	int receptId;
+	private int id;                     // i omraadet 1-99999999
+	private int status;                    // 0: ikke paabegyndt, 1: under produktion, 2: afsluttet
+	private int receiptId;
 
-	public ProductBatch(int pbId, int status, int receptId) {
-		this.pbId = pbId;
+	public ProductBatch(int id, int status, int receiptId) {
+		this.id = id;
 		this.status = status;
-		this.receptId = receptId;
+		this.receiptId = receiptId;
 	}
 
-	public int getPbId() {
-		return pbId;
+	public int getId() {
+		return id;
 	}
 
-	public void setPbId(int pbId) {
-		this.pbId = pbId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public int getStatus() {
@@ -27,16 +27,16 @@ public class ProductBatch {
 		this.status = status;
 	}
 
-	public int getReceptId() {
-		return receptId;
+	public int getReceiptId() {
+		return receiptId;
 	}
 
-	public void setReceptId(int receptId) {
-		this.receptId = receptId;
+	public void setReceiptId(int receiptId) {
+		this.receiptId = receiptId;
 	}
 
 	public String toString() {
-		return pbId + "\t" + status + "\t" + receptId;
+		return id + "\t" + status + "\t" + receiptId;
 	}
 }
 

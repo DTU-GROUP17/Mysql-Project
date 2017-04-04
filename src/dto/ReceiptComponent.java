@@ -1,32 +1,32 @@
 package dto;
 
 public class ReceiptComponent {
-	int receptId;                  // auto genereres fra 1..n   
-	int raavareId;             // i omraadet 1-99999999
+	int receiptId;                  // auto genereres fra 1..n
+	int materialId;             // i omraadet 1-99999999
 	double nomNetto;            // skal vaere positiv og passende stor
 	double tolerance;           // skal vaere positiv og passende stor
 
-	public ReceiptComponent(int receptId, int raavareId, double nomNetto, double tolerance) {
-		this.receptId = receptId;
-		this.raavareId = raavareId;
+	public ReceiptComponent(int receiptId, int materialId, double nomNetto, double tolerance) {
+		this.receiptId = receiptId;
+		this.materialId = materialId;
 		this.nomNetto = nomNetto;
 		this.tolerance = tolerance;
 	}
 
-	public int getReceptId() {
-		return receptId;
+	public int getReceiptId() {
+		return receiptId;
 	}
 
-	public void setReceptId(int receptId) {
-		this.receptId = receptId;
+	public void setReceiptId(int receiptId) {
+		this.receiptId = receiptId;
 	}
 
-	public int getRaavareId() {
-		return raavareId;
+	public int getMaterialId() {
+		return materialId;
 	}
 
-	public void setRaavareId(int raavareId) {
-		this.raavareId = raavareId;
+	public void setMaterialId(int materialId) {
+		this.materialId = materialId;
 	}
 
 	public double getNomNetto() {
@@ -46,6 +46,6 @@ public class ReceiptComponent {
 	}
 
 	public String toString() {
-		return receptId + "\t" + raavareId + "\t" + nomNetto + "\t" + tolerance;
+		return receiptId + "\t" + materialId + "\t" + nomNetto + "\t" + tolerance;
 	}
 }

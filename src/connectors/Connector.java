@@ -8,7 +8,7 @@ import java.sql.Statement;
 
 
 public class Connector {
-	private static Connection conn;
+	public static Connection conn;
 	private static Statement stm;
 	public Connector(String server, int port, String database,
 					 String username, String password)
@@ -49,6 +49,7 @@ public class Connector {
 
 	public static ResultSet doQuery(String cmd) throws DALException {
 		try {
+			System.out.println(cmd);
 			return stm.executeQuery(cmd);
 		} catch (SQLException e) {
 			throw new DALException(e);

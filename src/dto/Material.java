@@ -11,47 +11,47 @@ public class Material {
 	/**
 	 * i omraadet 1-99999999 vaelges af brugerne
 	 */
-	int raavareId;
+	private int id;
 	/**
 	 * min. 2 max. 20 karakterer
 	 */
-	String raavareNavn;
+	private String name;
 	/**
 	 * min. 2 max. 20 karakterer
 	 */
-	String leverandoer;
+	private String supplier;
 
-	public Material(int raavareId, String raavareNavn, String leverandoer) {
-		this.raavareId = raavareId;
-		this.raavareNavn = raavareNavn;
-		this.leverandoer = leverandoer;
+	public Material(int id, String name, String supplier) {
+		this.id = id;
+		this.name = name;
+		this.supplier = supplier;
 	}
 
-	public int getRaavareId() {
-		return raavareId;
+	public int getId() {
+		return id;
 	}
 
-	public void setRaavareId(int raavareId) {
-		this.raavareId = raavareId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public String getRaavareNavn() {
-		return raavareNavn;
+	public String getName() {
+		return name;
 	}
 
-	public void setRaavareNavn(String raavareNavn) {
-		this.raavareNavn = raavareNavn;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public String getLeverandoer() {
-		return leverandoer;
+	public String getSupplier() {
+		return supplier;
 	}
 
-	public void setLeverandoer(String leverandoer) {
-		this.leverandoer = leverandoer;
+	public void setSupplier(String supplier) {
+		this.supplier = supplier;
 	}
 
 	public String toString() {
-		return raavareId + "\t" + raavareNavn + "\t" + leverandoer;
+		return id + "\t" + name + "\t" + supplier;
 	}
 }

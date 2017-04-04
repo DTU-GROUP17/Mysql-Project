@@ -9,9 +9,9 @@ DROP TABLE IF EXISTS raavare;
 
 CREATE TABLE operatoer(opr_id INT PRIMARY KEY, opr_navn TEXT, ini TEXT, cpr TEXT, password TEXT) ENGINE=innoDB;
  
-CREATE TABLE raavare(raavare_id INT PRIMARY KEY, raavare_navn TEXT, leverandoer TEXT) ENGINE=innoDB;
+CREATE TABLE raavare(raavare_id INT PRIMARY KEY, raavare_navn TEXT, supplier TEXT) ENGINE=innoDB;
 
-CREATE TABLE raavarebatch(rb_id INT PRIMARY KEY, raavare_id INT, maengde REAL, 
+CREATE TABLE raavarebatch(rb_id INT PRIMARY KEY, raavare_id INT, amount REAL,
    FOREIGN KEY (raavare_id) REFERENCES raavare(raavare_id)) ENGINE=innoDB;
 
 CREATE TABLE recept(recept_id INT PRIMARY KEY, recept_navn TEXT) ENGINE=innoDB;
@@ -36,7 +36,7 @@ INSERT INTO operatoer(opr_id, opr_navn, ini, cpr, password) VALUES
 (2, 'Antonella B', 'AB', '080880-8008', 'atoJ21v'),
 (3, 'Luigi C', 'LC', '090990-9009', 'jEfm5aQ');
 
-INSERT INTO raavare(raavare_id, raavare_navn, leverandoer) VALUES
+INSERT INTO raavare(raavare_id, raavare_navn, supplier) VALUES
 (1, 'dej', 'Wawelka'),
 (2, 'tomat', 'Knoor'),
 (3, 'tomat', 'Veaubais'),
@@ -45,7 +45,7 @@ INSERT INTO raavare(raavare_id, raavare_navn, leverandoer) VALUES
 (6, 'skinke', 'Ost og Skinke A/S'),
 (7, 'champignon', 'Igloo Frostvarer');
 
-INSERT INTO raavarebatch(rb_id, raavare_id, maengde) VALUES
+INSERT INTO raavarebatch(rb_id, raavare_id, amount) VALUES
 (1, 1, 1000),
 (2, 2, 300),
 (3, 3, 300),

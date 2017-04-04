@@ -1,4 +1,4 @@
-INSERT INTO raavare (raavare_id, raavare_navn, leverandoer) VALUES
+INSERT INTO raavare (raavare_id, raavare_navn, supplier) VALUES
   (1, 'dej', 'Wawelka'),
   (2, 'tomat', 'Knoor'),
   (3, 'tomat', 'Veaubais'),
@@ -7,7 +7,7 @@ INSERT INTO raavare (raavare_id, raavare_navn, leverandoer) VALUES
   (6, 'skinke', 'Ost og Skinke A/S'),
   (7, 'champignon', 'Igloo Frostvarer');
 
-INSERT INTO raavarebatch (rb_id, raavare_id, maengde) VALUES
+INSERT INTO raavarebatch (rb_id, raavare_id, amount) VALUES
   (1, 1, 1000),
   (2, 2, 300),
   (3, 3, 300),

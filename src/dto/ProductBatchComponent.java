@@ -1,35 +1,35 @@
 package dto;
 
 public class ProductBatchComponent {
-	int pbId;      // produktbatchets id
-	int rbId;        // i omraadet 1-99999999
-	double tara;
-	double netto;
-	int oprId;                    // operatoer-nummer
+	private int productBatchId;      // produktbatchets productBatchId
+	private int MaterialBatchId;        // i omraadet 1-99999999
+	private double tara;
+	private double netto;
+	private int OperatorId;                    // operatoer-nummer
 
 
-	public ProductBatchComponent(int pbId, int rbId, double tara, double netto, int oprId) {
-		this.pbId = pbId;
-		this.rbId = rbId;
+	public ProductBatchComponent(int productBatchId, int rbId, double tara, double netto, int OperatorId) {
+		this.productBatchId = productBatchId;
+		this.MaterialBatchId = rbId;
 		this.tara = tara;
 		this.netto = netto;
-		this.oprId = oprId;
+		this.OperatorId = OperatorId;
 	}
 
-	public int getPbId() {
-		return pbId;
+	public int getProductBatchId() {
+		return productBatchId;
 	}
 
-	public void setPbId(int pbId) {
-		this.pbId = pbId;
+	public void setProductBatchId(int productBatchId) {
+		this.productBatchId = productBatchId;
 	}
 
-	public int getRbId() {
-		return rbId;
+	public int getMaterialBatchId() {
+		return MaterialBatchId;
 	}
 
-	public void setRbId(int rbId) {
-		this.rbId = rbId;
+	public void setMaterialBatchId(int materialBatchId) {
+		this.MaterialBatchId = materialBatchId;
 	}
 
 	public double getTara() {
@@ -48,15 +48,15 @@ public class ProductBatchComponent {
 		this.netto = netto;
 	}
 
-	public int getOprId() {
-		return oprId;
+	public int getOperatorId() {
+		return OperatorId;
 	}
 
-	public void setOprId(int oprId) {
-		this.oprId = oprId;
+	public void setOperatorId(int operatorId) {
+		this.OperatorId = operatorId;
 	}
 
 	public String toString() {
-		return pbId + "\t" + rbId + "\t" + tara + "\t" + netto + "\t" + oprId;
+		return productBatchId + "\t" + MaterialBatchId + "\t" + tara + "\t" + netto + "\t" + OperatorId;
 	}
 }

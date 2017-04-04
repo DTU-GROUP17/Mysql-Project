@@ -14,6 +14,7 @@ import dto.Operator;
 public class SQLOperator implements OperatorDAO {
 	public Operator find(int id) throws DALException {
 		ResultSet rs = Connector.doQuery("SELECT id, name, ini, cpr, password FROM operator WHERE id = "+id);
+
 		try {
 			if (!rs.first()) throw new DALException("Operatoeren med id=" + id + " findes ikke");
 			return new Operator(

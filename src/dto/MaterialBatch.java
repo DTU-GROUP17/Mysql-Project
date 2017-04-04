@@ -1,41 +1,41 @@
 package dto;
 
 public class MaterialBatch {
-	int rbId;                     // i omraadet 1-99999999
-	int raavareId;             // i omraadet 1-99999999
-	double maengde;             // kan vaere negativ 
+	int id;                     // i omraadet 1-99999999
+	int materialId;             // i omraadet 1-99999999
+	double amount;             // kan vaere negativ
 
-	public MaterialBatch(int rbId, int raavareId, double maengde) {
-		this.rbId = rbId;
-		this.raavareId = raavareId;
-		this.maengde = maengde;
+	public MaterialBatch(int id, int materialId, double amount) {
+		this.id = id;
+		this.materialId = materialId;
+		this.amount = amount;
 	}
 
-	public int getRbId() {
-		return rbId;
+	public int getId() {
+		return id;
 	}
 
-	public void setRbId(int rbId) {
-		this.rbId = rbId;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public int getRaavareId() {
-		return raavareId;
+	public int getMaterialId() {
+		return materialId;
 	}
 
-	public void setRaavareId(int raavareId) {
-		this.raavareId = raavareId;
+	public void setMaterialId(int materialId) {
+		this.materialId = materialId;
 	}
 
-	public double getMaengde() {
-		return maengde;
+	public double getAmount() {
+		return amount;
 	}
 
-	public void setMaengde(double maengde) {
-		this.maengde = maengde;
+	public void setAmount(double amount) {
+		this.amount = amount;
 	}
 
 	public String toString() {
-		return rbId + "\t" + raavareId + "\t" + maengde;
+		return id + "\t" + materialId + "\t" + amount;
 	}
 }
