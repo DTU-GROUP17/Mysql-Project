@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `sql_project` /*!40100 DEFAULT CHARACTER SET utf8 */;
+CREATE DATABASE  IF NOT EXISTS `sql_project_dummy` /*!40100 DEFAULT CHARACTER SET utf8 */;
 USE `sql_project`;
 -- MySQL dump 10.13  Distrib 5.6.17, for osx10.6 (i386)
 --
