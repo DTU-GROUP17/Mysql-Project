@@ -14,6 +14,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.db.api.Assertions.assertThat;
+import static org.assertj.Assertions.assertThat;
 
 public class OperatorTest {
 	OperatorDAO operatorDAO;
@@ -34,8 +35,8 @@ public class OperatorTest {
 
 	@Test
 	public void FindAnOperator() throws Exception{
-		//assertThat(operatorDAO.find(3)).hasId(3);
-		assertThat(operatorDAO.find(3).equals(3));
+		assertThat(operatorDAO.find(3)).hasId(3);
+		//assertThat(operatorDAO.find(3).equals(3));
 
 	}
 
