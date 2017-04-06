@@ -14,6 +14,7 @@ import org.junit.Test;
 import static org.assertj.core.api.Assertions.*;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.db.api.Assertions.assertThat;
+import static org.assertj.Assertions.assertThat;
 
 public class OperatorTest {
 	OperatorDAO operatorDAO;
