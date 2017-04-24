@@ -10,16 +10,18 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.List;
+
 import static org.assertj.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class OperatorTest extends BaseTest {
-	OperatorDAO operator;
-	Table table;
+	private OperatorDAO operator;
+	private Table table;
 
 
 	@Before
 	public void setUp() throws Exception {
-		new Connector();
 		operator = new SQLOperator();
 		table = new Table(source, "operator");
 
@@ -60,4 +62,9 @@ public class OperatorTest extends BaseTest {
 			.hasName("new name");
 	}
 
+	@Test
+	public void getAllOperators() throws Exception {
+		List<Operator> operators = operator.all();
+		assertThat(operators.size()).isEqualTo(3);
+	}
 }

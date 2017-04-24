@@ -1,5 +1,6 @@
 package Test;
 
+import connectors.Connector;
 import org.assertj.db.type.Source;
 import org.flywaydb.core.Flyway;
 import org.junit.Before;
@@ -24,5 +25,7 @@ public abstract  class BaseTest {
 		flyway.setLocations("filesystem:tests/seeds");
 		flyway.setValidateOnMigrate(false);
 		flyway.migrate();
+
+		new Connector();
 	}
 }

@@ -1,12 +1,3 @@
-INSERT INTO raavare (raavare_id, raavare_navn, supplier) VALUES
-  (1, 'dej', 'Wawelka'),
-  (2, 'tomat', 'Knoor'),
-  (3, 'tomat', 'Veaubais'),
-  (4, 'tomat', 'Franz'),
-  (5, 'ost', 'Ost og Skinke A/S'),
-  (6, 'skinke', 'Ost og Skinke A/S'),
-  (7, 'champignon', 'Igloo Frostvarer');
-
 INSERT INTO raavarebatch (rb_id, raavare_id, amount) VALUES
   (1, 1, 1000),
   (2, 2, 300),
@@ -15,11 +6,6 @@ INSERT INTO raavarebatch (rb_id, raavare_id, amount) VALUES
   (5, 5, 100),
   (6, 6, 100),
   (7, 7, 100);
-
-INSERT INTO recept (recept_id, recept_navn) VALUES
-  (1, 'margherita'),
-  (2, 'prosciutto'),
-  (3, 'capricciosa');
 
 INSERT INTO receptkomponent (recept_id, raavare_id, nom_netto, tolerance) VALUES
   (1, 1, 10.0, 0.1),
