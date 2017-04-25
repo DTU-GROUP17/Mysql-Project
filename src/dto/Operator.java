@@ -1,5 +1,7 @@
 package dto;
 
+import java.util.List;
+
 /**
  * Operatoer Data Access Objekt
  *
@@ -29,6 +31,8 @@ public class Operator {
 	 * Operatoer password min. 7 max. 8 karakterer
 	 */
 	private String password;
+
+	private List<String> roles;
 
 	public Operator(int id, String name, String ini, String cpr, String password) {
 		this.id = id;
@@ -86,7 +90,21 @@ public class Operator {
 		this.password = password;
 	}
 
+	public List<String> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(List<String> roles) {
+		this.roles = roles;
+	}
+
+	public void addRole(String role) {
+		this.roles.add(role);
+	}
+
 	public String toString() {
 		return id + "\t" + name + "\t" + ini + "\t" + cpr + "\t" + password;
 	}
+
+
 }

@@ -65,6 +65,16 @@ public class JUnitSoftAssertions implements TestRule {
   }
 
   /**
+   * Creates a new "soft" instance of <code>{@link dto.MaterialTestAssert}</code>.
+   *
+   * @param actual the actual value.
+   * @return the created "soft" assertion object.
+   */
+  public dto.MaterialTestAssert assertThat(dto.MaterialTest actual) {
+    return proxy(dto.MaterialTestAssert.class, dto.MaterialTest.class, actual);
+  }
+
+  /**
    * Creates a new "soft" instance of <code>{@link dto.OperatorAssert}</code>.
    *
    * @param actual the actual value.
@@ -122,6 +132,26 @@ public class JUnitSoftAssertions implements TestRule {
    */
   public dto.ReceiptComponentAssert assertThat(dto.ReceiptComponent actual) {
     return proxy(dto.ReceiptComponentAssert.class, dto.ReceiptComponent.class, actual);
+  }
+
+  /**
+   * Creates a new "soft" instance of <code>{@link dto.ReceiptTestAssert}</code>.
+   *
+   * @param actual the actual value.
+   * @return the created "soft" assertion object.
+   */
+  public dto.ReceiptTestAssert assertThat(dto.ReceiptTest actual) {
+    return proxy(dto.ReceiptTestAssert.class, dto.ReceiptTest.class, actual);
+  }
+
+  /**
+   * Creates a new "soft" instance of <code>{@link dto.RoleAssert}</code>.
+   *
+   * @param actual the actual value.
+   * @return the created "soft" assertion object.
+   */
+  public dto.RoleAssert assertThat(dto.Role actual) {
+    return proxy(dto.RoleAssert.class, dto.Role.class, actual);
   }
 
 }

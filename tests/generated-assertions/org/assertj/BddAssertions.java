@@ -27,6 +27,16 @@ public class BddAssertions {
   }
 
   /**
+   * Creates a new instance of <code>{@link dto.MaterialTestAssert}</code>.
+   *
+   * @param actual the actual value.
+   * @return the created assertion object.
+   */
+  public static dto.MaterialTestAssert then(dto.MaterialTest actual) {
+    return new dto.MaterialTestAssert(actual);
+  }
+
+  /**
    * Creates a new instance of <code>{@link dto.OperatorAssert}</code>.
    *
    * @param actual the actual value.
@@ -84,6 +94,26 @@ public class BddAssertions {
    */
   public static dto.ReceiptComponentAssert then(dto.ReceiptComponent actual) {
     return new dto.ReceiptComponentAssert(actual);
+  }
+
+  /**
+   * Creates a new instance of <code>{@link dto.ReceiptTestAssert}</code>.
+   *
+   * @param actual the actual value.
+   * @return the created assertion object.
+   */
+  public static dto.ReceiptTestAssert then(dto.ReceiptTest actual) {
+    return new dto.ReceiptTestAssert(actual);
+  }
+
+  /**
+   * Creates a new instance of <code>{@link dto.RoleAssert}</code>.
+   *
+   * @param actual the actual value.
+   * @return the created assertion object.
+   */
+  public static dto.RoleAssert then(dto.Role actual) {
+    return new dto.RoleAssert(actual);
   }
 
   /**
