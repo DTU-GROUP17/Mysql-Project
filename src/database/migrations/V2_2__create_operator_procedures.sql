@@ -35,7 +35,7 @@ CREATE PROCEDURE updateOrCreateOperator
   )
   BEGIN
     INSERT INTO operator (id, name, ini, cpr, password) VALUES (p_id, p_name, p_ini, p_cpr, p_password)
-      ON DUPLICATE KEY UPDATE id = p_id, name = p_name, ini = p_ini, password = p_password;
+      ON DUPLICATE KEY UPDATE name = p_name, ini = p_ini, password = p_password;
   END //
 DELIMITER ;
 

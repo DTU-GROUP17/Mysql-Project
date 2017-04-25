@@ -4,7 +4,6 @@ import connectors.Connector;
 import connectors.DALException;
 import dao.contracts.ReceiptDAO;
 import dto.Receipt;
-import dto.Receipt;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
