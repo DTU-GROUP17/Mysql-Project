@@ -15,13 +15,11 @@ import static org.assertj.Assertions.assertThat;
 
 public class ReceiptTest extends BaseTest {
 	private ReceiptDAO Receipt;
-	private Table table;
 
 
 	@Before
 	public void setUp() throws Exception {
 		Receipt = new SQLReceipt();
-		table = new Table(source, "Receipt");
 
 	}
 

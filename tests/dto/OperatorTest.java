@@ -17,13 +17,11 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class OperatorTest extends BaseTest {
 	private OperatorDAO operator;
-	private Table table;
 
 
 	@Before
 	public void setUp() throws Exception {
 		operator = new SQLOperator();
-		table = new Table(source, "operator");
 
 	}
 

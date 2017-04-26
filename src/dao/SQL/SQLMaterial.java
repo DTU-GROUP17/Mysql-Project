@@ -26,7 +26,6 @@ public class SQLMaterial implements MaterialDAO {
 		} catch (SQLException e) {
 			throw new DALException(e);
 		}
-
 	}
 
 	@Override

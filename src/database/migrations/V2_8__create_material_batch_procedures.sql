@@ -33,6 +33,14 @@ CREATE PROCEDURE updateOrCreateMaterialBatch
     INSERT INTO materialBatch (id, materialId, amount) VALUES (p_id, p_materialId, p_amount)
     ON DUPLICATE KEY UPDATE materialId = p_materialId, amount = p_amount;
   END //
+
+
+
+CREATE PROCEDURE materialBatchByMaterial()
+  (
+    IN p_materialId INTEGER
+  )
+  BEGIN
+    SELECT * FROM materialbatch JOIN material ON material.id = materialbatch.materialId WHERE 
+  END //
 DELIMITER ;
-
-

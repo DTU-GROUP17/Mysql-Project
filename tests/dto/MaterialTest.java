@@ -16,13 +16,11 @@ import static org.assertj.Assertions.assertThat;
 public class MaterialTest extends BaseTest{
 
 	private MaterialDAO materialDAO;
-	private Table table;
 
 
 	@Before
 	public void setUp() throws Exception {
 		materialDAO = new SQLMaterial();
-		table = new Table(source, "materialDAO");
 
 	}
 
