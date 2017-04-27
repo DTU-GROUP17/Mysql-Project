@@ -14,7 +14,7 @@ import java.util.List;
 public class SQLRole implements RoleDAO{
 	@Override
 	public Role find(int id) throws DALException {
-		ResultSet rs = Connector.doQuery("SELECT id, name FROM role WHERE id = " + id);
+		ResultSet rs = Connector.doQuery("SELECT id, name FROM roles WHERE id = " + id);
 
 		try {
 			if (!rs.first()) throw new DALException("Rolet with id="+id+" does not exist.");
@@ -30,7 +30,7 @@ public class SQLRole implements RoleDAO{
 	@Override
 	public List<Role> all() throws DALException {
 		List<Role> list = new ArrayList<>();
-		ResultSet rs = Connector.doQuery("SELECT id, name FROM role");
+		ResultSet rs = Connector.doQuery("SELECT id, name FROM roles");
 		try {
 			while (rs.next()) {
 				list.add(
