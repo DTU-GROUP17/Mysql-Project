@@ -76,7 +76,7 @@ public class SQLMaterialBatch implements MaterialBatchDAO{
 	@Override
 	public List<MaterialBatch> findByMaterial(int materialId) throws DALException {
 		List<MaterialBatch> list = new ArrayList<>();
-		ResultSet rs = Connector.doQuery("SELECT id, materialId, amount FROM materialBatch"); //TODO limit by material
+		ResultSet rs = Connector.doQuery("CALL materialBatchByMaterial("+materialId+");");
 		try {
 			while (rs.next()) {
 				list.add(

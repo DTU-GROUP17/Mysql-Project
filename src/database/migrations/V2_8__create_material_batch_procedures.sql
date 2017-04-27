@@ -35,12 +35,11 @@ CREATE PROCEDURE updateOrCreateMaterialBatch
   END //
 
 
-
-CREATE PROCEDURE materialBatchByMaterial()
+CREATE PROCEDURE materialBatchByMaterial
   (
     IN p_materialId INTEGER
   )
   BEGIN
-    SELECT * FROM materialbatch JOIN material ON material.id = materialbatch.materialId WHERE 
+    SELECT * FROM materialbatch WHERE materialId = p_materialId;
   END //
 DELIMITER ;

@@ -60,4 +60,10 @@ public class MaterialBatchTest extends BaseTest {
 		List<MaterialBatch> MaterialBatches = MaterialBatchDAO.all();
 		Assertions.assertThat(MaterialBatches.size()).isEqualTo(7);
 	}
+
+	@Test
+	public void getAllMaterialBatchesByMaterial() throws Exception {
+		List<MaterialBatch> MaterialBatches = MaterialBatchDAO.findByMaterial(1);
+		Assertions.assertThat(MaterialBatches.size()).isEqualTo(1);
+	}
 }
