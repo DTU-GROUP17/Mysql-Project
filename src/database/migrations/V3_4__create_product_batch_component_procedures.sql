@@ -8,7 +8,7 @@ CREATE PROCEDURE createProductBatchComponent
     IN p_operatorId       INT
   )
   BEGIN
-    INSERT INTO productBatchComponent (id, materialBatchId, tara, netto, operatorID) VALUES (p_productBatchId, p_materialBatchId, p_tara, p_netto, p_operatorId);
+    INSERT INTO productBatchComponent (productBatchId, materialBatchId, tara, netto, operatorID) VALUES (p_productBatchId, p_materialBatchId, p_tara, p_netto, p_operatorId);
   END //
 
 CREATE PROCEDURE updateProductBatchComponent
@@ -22,11 +22,10 @@ CREATE PROCEDURE updateProductBatchComponent
   BEGIN
     UPDATE productBatchComponent
     SET
-      materialBatchId = p_materialBatchId,
       tara = p_tara,
       netto = p_netto,
       operatorID = p_operatorId
-    WHERE id = p_productBatchId;
+    WHERE productBatchId = p_productBatchId AND materialBatchId = p_materialBatchId;
   END //
 
 CREATE PROCEDURE updateOrCreateProductBatchComponent
@@ -38,7 +37,7 @@ CREATE PROCEDURE updateOrCreateProductBatchComponent
     IN p_operatorId       INT
   )
   BEGIN
-    INSERT INTO productBatchComponent (id, materialBatchId, tara, netto, operatorID) VALUES (p_productBatchId, p_materialBatchId, p_tara, p_netto, p_operatorId)
+    INSERT INTO productBatchComponent (productBatchId, materialBatchId, tara, netto, operatorID) VALUES (p_productBatchId, p_materialBatchId, p_tara, p_netto, p_operatorId)
     ON DUPLICATE KEY UPDATE materialBatchId = p_materialBatchId, tara = p_tara, netto = p_netto, operatorID = p_operatorId;
   END //
 DELIMITER ;
