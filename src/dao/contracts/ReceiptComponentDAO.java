@@ -8,7 +8,7 @@ import dto.ReceiptComponent;
 public interface ReceiptComponentDAO {
 	ReceiptComponent findByReceiptAndMaterial(int receptId, int raavareId) throws DALException;
 
-	List<ReceiptComponent> findByRecept(int receptId) throws DALException;
+	List<ReceiptComponent> findByReceipt(int receptId) throws DALException;
 
 	List<ReceiptComponent> all() throws DALException;
 

@@ -1,6 +1,11 @@
 package dto;
 
 public class Role {
+	public Role(int id, String name) {
+		this.id = id;
+		this.name = name;
+	}
+
 	private int id;
 
 	private String name;
